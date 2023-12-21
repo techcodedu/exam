@@ -24,6 +24,7 @@ include('settings.php');
                 <th>Status ID</th>
                 <th>Created At</th>
                 <th>Updated At</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -40,6 +41,11 @@ include('settings.php');
                 <td><?php echo htmlspecialchars($row['status_id']); ?></td>
                 <td><?php echo htmlspecialchars($row['created_at']); ?></td>
                 <td><?php echo htmlspecialchars($row['updated_at']); ?></td>
+                <td>
+                    <a href="/admin/edit_person.php?id=<?php echo $row['id']; ?>">
+                        <i class="fas fa-edit">Edit</i>
+                    </a>
+                </td>
             </tr>
             <?php endwhile; ?>
         </tbody>
